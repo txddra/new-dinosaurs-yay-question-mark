@@ -50,7 +50,7 @@ const makeExtinct = function(dino){
     species: dino.species,
     period: dino.period,
     carnivore: dino.carnivore,
-    extinct: dino.extinct,
+    extinct: dino.extinct= true,
 }
 return thisDinoObj.extinct
 }
