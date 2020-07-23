@@ -32,9 +32,11 @@ const truncateSpecies = function(dino){
     carnivore: dino.carnivore,
     extinct: dino.extinct,
   }
+// if name is longer than 10, shorten to 7
   if (dinoObj.species.length > 10 ){
     dinoObj.species = dinoObj.species.slice(0,7) + "..."
     }else {
+        //unchanged if length is less than 10
   dinoObj.species = dinoObj.species
     }
   return dinoObj
@@ -43,8 +45,14 @@ const truncateSpecies = function(dino){
 
 
 
-const makeExtinct = function() {
-
+const makeExtinct = function(dino){
+  const thisDinoObj = {
+    species: dino.species,
+    period: dino.period,
+    carnivore: dino.carnivore,
+    extinct: dino.extinct,
+}
+return thisDinoObj.extinct
 }
 
 module.exports = {
