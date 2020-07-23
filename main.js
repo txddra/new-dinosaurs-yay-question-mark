@@ -24,10 +24,24 @@ if(madeDinoObj.species.endsWith('us')){
 return madeDinoObj;
 
 }
-
-
-const truncateSpecies = function() {
+const truncateSpecies = function(dino){
+  
+  const dinoObj = {
+    species: dino.species,
+    period: dino.period,
+    carnivore: dino.carnivore,
+    extinct: dino.extinct,
+  }
+  if (dinoObj.species.length > 10 ){
+    dinoObj.species = dinoObj.species.slice(0,7) + "..."
+    }else {
+  dinoObj.species = dinoObj.species
+    }
+  return dinoObj
 }
+
+
+
 
 const makeExtinct = function() {
 
